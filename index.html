@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Awesome Website</title>
+  <style>
+    :root {
+      --primary: #2b6cb0;
+      --accent: #68d391;
+      --bg: #f7fafc;
+      --text: #222;
+      --footer-bg: #2d3748;
+      --footer-text: #f7fafc;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', 'Arial', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 1.5rem 0;
+      text-align: center;
+    }
+    nav {
+      margin-top: 1rem;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+    .hero {
+      background: linear-gradient(135deg, var(--primary) 70%, var(--accent) 100%);
+      color: #fff;
+      padding: 5rem 1rem 4rem 1rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+    }
+    .hero button {
+      background: var(--accent);
+      color: var(--primary);
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      border-radius: 24px;
+      cursor: pointer;
+      transition: background 0.2s;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+    }
+    .hero button:hover {
+      background: #48bb78;
+    }
+    section {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    section h2 {
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .feature-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      flex: 1 1 250px;
+      min-width: 220px;
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.15s;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px) scale(1.03);
+    }
+    .feature-card h3 {
+      margin-top: 0;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+    .about {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    .contact-form {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+      padding: 2rem;
+      max-width: 500px;
+      margin: 2rem auto;
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-weight: 500;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 1rem;
+      border: 1px solid #cbd5e0;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    .contact-form button {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      border-radius: 22px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .contact-form button:hover {
+      background: #205082;
+    }
+    footer {
+      background: var(--footer-bg);
+      color: var(--footer-text);
+      text-align: center;
+      padding: 2rem 1rem 1rem 1rem;
+      margin-top: 4rem;
+    }
+    @media (max-width: 700px) {
+      .features {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Awesome Website</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <section class="hero" id="home">
+    <h1>Welcome to Your New Website!</h1>
+    <p>Build something amazing. This starter template is clean, modern, and easy to customize for any project.</p>
+    <button onclick="location.href='#contact'">Get Started</button>
+  </section>
+  <section id="about">
+    <div class="about">
+      <h2>About This Project</h2>
+      <p>
+        This is a fully responsive, ready-to-use website template. You can easily customize the colors, text, and layout to fit your needs. Add your own images, sections, or even new pages!
+      </p>
+    </div>
+  </section>
+  <section id="features">
+    <h2>Features</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>Easy to Edit</h3>
+        <p>Change the text, colors, and layout directly in the HTML and CSS. No build tools required.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Responsive Design</h3>
+        <p>Looks great on desktop, tablet, and mobile. Resize your browser to see it adapt.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Modern Styles</h3>
+        <p>Built with clean, modern CSS for a professional look and feel.</p>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <form class="contact-form" autocomplete="off" onsubmit="alert('Thank you! Your message has been sent.'); return false;">
+      <h2>Contact Us</h2>
+      <label for="name">Name</label>
+      <input id="name" name="name" required>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+  <footer>
+    &copy; 2025 My Awesome Website &bull; Made with ♥ and GitHub Pages
+  </footer>
+</body>
+</html>
